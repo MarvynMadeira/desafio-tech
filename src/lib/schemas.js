@@ -1,4 +1,4 @@
-const vendasJson = {
+export const vendasJson = {
   vendas: [
     { vendedor: "João Silva", valor: 1200.5 },
     { vendedor: "João Silva", valor: 950.75 },
@@ -42,7 +42,7 @@ const vendasJson = {
   ],
 };
 
-const estoqueJson = {
+export const estoqueJson = {
   estoque: [
     { codigoProduto: 101, descricaoProduto: "Caneta Azul", estoque: 150 },
     {
@@ -59,5 +59,3 @@ const estoqueJson = {
     },
   ],
 };
-
-export default { vendasJson, estoqueJson };

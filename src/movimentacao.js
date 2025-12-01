@@ -1,8 +1,8 @@
-import estoqueJson from "./lib/schemas";
+import { estoqueJson } from "./lib/schemas.js";
 
 //Função 2: Movimentação no estoque.
 
-function movimentarEstoque(codigoProduto, quantidade, tipo) {
+export function movimentarEstoque(codigoProduto, quantidade, tipo) {
   const produto = estoqueJson.estoque.find(
     (p) => p.codigoProduto === codigoProduto
   );
@@ -15,9 +15,10 @@ function movimentarEstoque(codigoProduto, quantidade, tipo) {
     produto.estoque += quantidade;
     return `código do Produto: ${codigoProduto}, qtde adicionada: ${quantidade}, estoque atual: ${produto.estoque}`;
   } else {
+    if (produto.estoque < quantidade) {
+      return "Estoque insuficiente";
+    }
     produto.estoque -= quantidade;
     return `código do Produto: ${codigoProduto}, qtde removida: ${quantidade}, estoque atual: ${produto.estoque}`;
   }
 }
-
-export default { movimentarEstoque };

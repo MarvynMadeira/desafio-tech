@@ -1,11 +1,11 @@
 //Função 1: Calculadora de comissão.
 
-function calcularComissao(vendedor, valor) {
+export function calcularComissao(vendedor, valor) {
   if (valor < 100) {
     return {
       vendedor,
-      commissao: null,
-      message: `vendedor: ${vendedor}, commissão: nenhuma`,
+      comissao: null,
+      message: `vendedor: ${vendedor}, comissão: nenhuma`,
     };
   }
   if (valor < 500) {
@@ -13,7 +13,7 @@ function calcularComissao(vendedor, valor) {
     return {
       vendedor,
       comissao,
-      message: `vendedor: ${vendedor}, commissão: ${comissao}`,
+      message: `vendedor: ${vendedor}, comissão: ${comissao}`,
     };
   }
 
@@ -21,8 +21,6 @@ function calcularComissao(vendedor, valor) {
   return {
     vendedor,
     comissao,
-    message: `vendedor: ${vendedor}, comissao: ${comissao}`,
+    message: `vendedor: ${vendedor}, comissão: ${comissao}`,
   };
 }
-
-export default { calcularComissao };
