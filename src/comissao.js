@@ -13,7 +13,7 @@ export function calcularComissao(vendedor, valor) {
     return {
       vendedor,
       comissao,
-      message: `vendedor: ${vendedor}, comissão: ${comissao}`,
+      message: `vendedor: ${vendedor}, comissão: ${comissao.toFixed(2)}`,
     };
   }
 
@@ -21,6 +21,6 @@ export function calcularComissao(vendedor, valor) {
   return {
     vendedor,
     comissao,
-    message: `vendedor: ${vendedor}, comissão: ${comissao}`,
+    message: `vendedor: ${vendedor}, comissão: ${comissao.toFixed(2)}`,
   };
 }
